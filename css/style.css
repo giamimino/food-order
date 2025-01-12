@@ -1,0 +1,290 @@
+@import url(https://fonts.googleapis.com/css?family=Sofia+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Sofia:regular);
+
+@font-face {
+  font-family: "Sofia Pro reg";
+  src: url('../assets/fonts/sofia-pro/Sofia\ Pro\ Regular\ Az.otf');
+}
+
+@font-face {
+  font-family: "Sofia Pro black";
+  src: url('../assets/fonts/sofia-pro/Sofia\ Pro\ Black\ Az.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0D0D0D;
+}
+
+.reqtangle {
+  width: 100%;
+  height: 788px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+  z-index: -999;
+}
+
+.header-shadow {
+  position: absolute;
+  width: 576.1px;
+  height: 418.78px;
+  left: 965px;
+  top: -99px;
+  background: #FDCE77;
+  filter: blur(1000px);
+  opacity: 0.5;
+  z-index: -999;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-family: "Sofia", sans-serif;
+  justify-content: space-between;
+  padding: 28px 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.directionVectorLogoToTitle {
+  position: absolute;
+  left: 222px;
+  top: 92.5px;
+}
+
+.header-components  {
+  display: flex;
+  gap: 50px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.header-components a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.header-components a:hover {
+  text-decoration: underline;
+}
+
+.download-btn {
+  width: 162px;
+  height: 45px;
+  background-color: #F65F5F;
+  color: #0D0D0D;
+  font-family: "Sofia Pro reg", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 2px solid #F65F5F;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  margin-left: 40px;
+}
+
+.download-btn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.left-side-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 70px 0;
+  width: auto;
+  height: auto;
+}
+
+.left-side-main h1 {
+  width: 550px;
+  font-size: 62px;
+  font-family: "Sofia Pro black", sans-serif;
+  line-height: 140%;
+  text-align: left;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.left-side-main h1 .orange {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.left-side-main h1 span:nth-child(1),
+.left-side-main h1 span:nth-child(2) {
+  color: #F65F5F;
+}
+
+.left-side-main h1 span:nth-child(3) {
+  color: #FDC55E;
+  position: relative;
+}
+
+.left-side-main h1 span:nth-child(3) img {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.left-side-main p {
+  width: 440px;
+  font-size: 24px;
+  font-family: "Sofia Pro reg", sans-serif;
+  color: #fff;
+  opacity: 0.8;
+  letter-spacing: -1px;
+  line-height: auto;
+  margin-top: 10px;
+}
+
+.search-food-container {
+  width: 471px;
+  height: 54px;
+  display: flex;
+  border: 0.5px solid #fff;
+  background-color: #0D0D0D;
+  border-radius: 100px;
+  padding: 15px;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.search-food-container i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.search-food-container input {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.search-food-container input:focus {
+  border: none;
+  outline: none;
+}
+
+.search-food-container input::placeholder {
+  font-family: "Sofia Pro reg";
+  letter-spacing: -1px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.search-food-container button {
+  width: 52.68px;
+  height: 42px;
+  border-radius: 100px;
+  background-color: #FDCE77;
+  color: #0D0D0D;
+  border: 2px solid #FDCE77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.search-food-container button:hover {
+  opacity: 0.8;
+}
+
+.search-food-container button:active {
+  opacity: 2;
+  transition: .1s;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  max-height: auto;
+  min-height: auto;
+  padding: 0 70px;
+  overflow: hidden;
+  margin-top: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side-main {
+  display: flex;
+  height: 700px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.right-side-main img:nth-child(1) {
+  width: 600px;
+  height: auto;
+}
+
+.right-side-main img:nth-child(2) {
+  width: 120px;
+  height: fit-content;
+  top: 405px;
+  position: absolute;
+  animation: rotateFood 45s linear infinite;
+}
+
+.right-side-main img:nth-child(3) {
+  width: 117px;
+  height: fit-content;
+  top: 530px;
+  left: 140px;
+  position: absolute;
+  animation: rotateFood 45s linear infinite;
+}
+
+.right-side-main img:nth-child(4) {
+  width: 117px;
+  height: fit-content;
+  top: 535px;
+  left: 325px;
+  position: absolute;
+  animation: rotateFood 45s linear infinite;
+}
+
+.right-side-main img:nth-child(5) {
+  width: 100px;
+  height: fit-content;
+  top: 422px;
+  right: 60px;
+  position: absolute;
+  animation: rotateFood 45s linear infinite;
+}
+
+@keyframes rotateFood {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
