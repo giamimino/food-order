@@ -22,6 +22,46 @@
 
 body {
   background-color: #0D0D0D;
+  cursor: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F65F5F;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5555559f;
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  z-index: 999;
+}
+
+.design20 {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  scale: 1;
 }
 
 .reqtangle {
@@ -46,17 +86,94 @@ body {
   z-index: -999;
 }
 
+.svg-container {
+  position: absolute;
+  left: 70px;
+  top: 730px;
+  cursor: none;
+  width: 23px;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  top: 37px;
+  transition: all .3s ease-in-out;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FDCE77;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.circle-1 {
+  width: 10px;
+  height: 10px;
+  top: 4px;
+}
+
+.circle-2 {
+  width: 8px;
+  height: 8px;
+  top: 17px;
+}
+
+.circle-3 {
+  width: 6px;
+  height: 6px;
+  top: 27px;
+}
+
+.circle-4 {
+  width: 4px;
+  height: 4px;
+  top: 35px;
+}
+
+.svg-container:hover .circle-3 {
+  top: 28px;
+}
+
+.svg-container:hover .circle-2 {
+  top: 19px;
+}
+
+.svg-container:hover .circle-1 {
+  top: 8px;
+}
+
+.svg-container:hover .arrow {
+  top: 34px;
+}
+
+
+
 header {
-  width: 100%;
+  width: calc(100% - 124px);
   display: flex;
   color: #fff;
   font-family: "Sofia", sans-serif;
   justify-content: space-between;
-  padding: 28px 70px;
   position: fixed;
-  top: 0;
-  left: 0;
+  padding: 8px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9;
+  background: transparent;
+  border-radius: 18px;
+}
+
+header.animation-started-header {
+  background: #0d0d0d52;
 }
 
 .directionVectorLogoToTitle {
@@ -76,6 +193,7 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  cursor: none;
 }
 
 .header-components a:hover {
@@ -92,9 +210,9 @@ header {
   font-weight: 600;
   border-radius: 100px;
   border: 2px solid #F65F5F;
-  cursor: pointer;
   transition: .5s ease-in-out;
   margin-left: 40px;
+  cursor: none;
 }
 
 .download-btn:hover {
@@ -207,7 +325,7 @@ header {
   justify-content: center;
   align-items: center;
   transition: .3s ease-in-out;
-  cursor: pointer;
+  cursor: none;
 }
 
 .search-food-container button:hover {
@@ -287,4 +405,174 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.today-special-offer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.today-special-offer-container h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Sofia Pro reg";
+  margin-bottom: 20px;
+}
+
+.today-special-offer-container h1 span {
+  color: #F65F5F;
+}
+
+.today-special-offer-container p {
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  font-family: "Sofia Pro reg";
+  width: 856px;
+}
+
+.today-special-offers-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 60px;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.today-special-offer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: visible;
+  animation: appear 1s linear;
+  animation-timeline: scroll(view-timeline);
+  animation-range: entry 0%;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.food-image-wrapper {
+  position: relative;
+  top: 75px;
+  left: 42%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  overflow: visible;
+  z-index: 3;
+}
+
+.food-image-wrapper img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.food-image-wrapper img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.food-image-wrapper img:nth-child(2) {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.today-special-offer-price {
+  position: absolute;
+  right: 55px;
+  bottom: 0;
+  width: 44px;
+  height: 43px;
+  background-color: #FDCE77;
+  border: 4px solid #0D0D0D;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 3;
+  font-family: "Sofia Pro reg", sans-serif;
+}
+
+.today-special-offer {
+  width: 300px;
+  height: 368px;
+  background-image: linear-gradient(#6a4f4f28, #6a4f4f 100%);
+  border-radius: 20px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow: visible;
+  position: relative;
+}
+
+.today-special-offer p {
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+}
+
+.today-special-offer h2 {
+  color: #F65F5F;
+  font-family: "Sofia Pro reg";
+  text-align: center;
+}
+
+.today-special-offer-rate {
+  position: relative;
+  display: flex;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.today-special-offer-rate p {
+  width: auto;
+  margin-left: 5px;
+}
+
+.today-special-offer button {
+  position: absolute;
+  width: 131px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F65F5F;
+  color: #0D0D0D;
+  font-family: "Sofia Pro reg";
+  bottom: 10px;
+  border: 2px solid #F65F5F;
+  border-radius: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: none;
+  transition: all .4s ease-in-out;
+}
+
+.today-special-offer button:hover {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #F65F5F;
 }
