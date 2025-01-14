@@ -11,6 +11,16 @@
   src: url('../assets/fonts/sofia-pro/Sofia\ Pro\ Black\ Az.otf');
 }
 
+@font-face {
+  font-family: "Sofia Pro bold";
+  src: url('../assets/fonts/sofia-pro/Sofia\ Pro\ Bold\ Az.otf');
+}
+
+@font-face {
+  font-family: "Sofia Pro med";
+  src: url('../assets/fonts/sofia-pro/Sofia\ Pro\ Medium\ Az.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +65,23 @@ body {
   transition: transform 0.1s ease-out;
   will-change: transform;
   z-index: 999;
+  border: 2px solid #fff;
 }
+
+.custom-cursor-outline {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  outline: none;
+  stroke: none;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
 
 .design20 {
   position: absolute;
@@ -575,4 +601,87 @@ main {
   background: transparent;
   color: #fff;
   border: 2px solid #F65F5F;
+}
+
+.services-promo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  font-family: "Sofia Pro reg";
+  margin-top: 300px;
+}
+
+.services-promo-container .cockMen {
+  position: absolute;
+  z-index: -1;
+  margin-top: 20px;
+}
+
+.services-promo {
+  margin-left: 639px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 690px;
+}
+
+.services-promo h1 {
+  font-family: "Sofia Pro bold";
+  font-size: 48px;
+  line-height: 130%;
+  width: 452px;
+}
+
+.services-promo h1 span:nth-child(1) {
+  color: #F65F5F;
+}
+
+.services-promo h1 span:nth-child(2) {
+  color: #FDC55E;
+}
+
+.services-promo p {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+.services-grid-wrapper {
+  display: flex;
+  gap: 76px;
+}
+
+.services-grid-wrapper .services-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.services-grid-wrapper .services-column div {
+  display: flex;
+  gap: 10px;
+  font-family: "Sofia Pro med";
+}
+
+.services-promo button {
+  width: 114px;
+  height: 45px;
+  background-color: #F65F5F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 18px;
+  font-family: "Sofia Pro reg";
+  border: 2px solid #F65F5F;
+  border-radius: 100px;
+  transition: all .4s ease-in-out;
+  z-index: 3;
+  cursor: none;
+}
+
+.services-promo button:hover {
+  background-color: transparent;
+  color: #F65F5F;
 }

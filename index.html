@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
   <img src="./assets/svg/vector.svg" style="position: absolute; right: 65px; top: 132px;" alt="">
   <div class="reqtangle"></div>
   <div class="header-shadow"></div>
@@ -34,7 +35,7 @@
       </svg>
       </div>
       <div class="header-components">
-        <a href="#" class="header-component-1">Today special offers</a>
+        <a onclick="scrollToY(722)" class="header-component-1">Today special offers</a>
         <a href="#" class="header-component-2">Why FoodHut</a>
         <a href="#" class="header-component-3">Our Menu</a>
         <a href="#" class="header-component-4">Our Popular food</a>
@@ -67,7 +68,7 @@
       <img src="./assets/images/Meal-PNG-Download-Image 2.png" alt="">
     </div>
   </main>
-  <div class="svg-container">
+  <div class="svg-container" onclick="scrollToY(1653)">
     <div class="arrow"><svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5607 2.56066L13.0147 12.1066C12.4289 12.6924 11.4792 12.6924 10.8934 12.1066L1.34746 2.56066C0.761669 1.97487 0.761669 1.02513 1.34746 0.439341C1.93324 -0.146446 2.88299 -0.146446 3.46878 0.439341L11.9541 8.92462L20.4393 0.43934C21.0251 -0.146447 21.9749 -0.146447 22.5607 0.43934C23.1464 1.02513 23.1464 1.97487 22.5607 2.56066Z" fill="#F65F5F"/>
     </svg>
@@ -146,6 +147,46 @@
         <button class="today-special-offer-order">Order Now</button>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="services-promo-container">
+    <img class="cockMen" src="./assets/svg/cockerMen.svg">
+    <div class="services-promo">
+      <h1>We are <span>more</span> than <span>multiple</span> service</h1>
+      <p>This is a type of resturent which typically serves food and drink,
+         in addition to light refreshments such as baked goods or snacks.
+         The term comes frome the rench word meaning food</p>
+         <div class="services-grid-wrapper">
+          <div class="services-column">
+            <div class="online-order">
+              <img src="./assets/svg/services/onlineorder.svg" alt="">
+              <h3>Online Order</h3>
+            </div>
+            <div class="Pre-Reservation">
+              <img src="./assets/svg/services/Pre-Reservation.svg" alt="">
+              <h3>Pre-Reservation</h3>
+            </div>
+            <div class="SuperChef">
+              <img src="./assets/svg/services/SuperChef.svg" alt="">
+              <h3>Super Chef</h3>
+            </div>
+          </div>
+          <div class="services-column">
+            <div class="24Service">
+              <img src="./assets/svg/services/24Service.svg" alt="">
+              <h3>24/7 Service</h3>
+            </div>
+            <div class="OragonizedFoodhutPlace">
+              <img src="./assets/svg/services/OragonizedFoodhutPlace.svg" alt="">
+              <h3>Oragonized Foodhut Place</h3>
+            </div>
+            <div class="CleanKitchen">
+              <img src="./assets/svg/services/CleanKitchen.svg" alt="">
+              <h3>Clean Kitchen</h3>
+            </div>
+          </div>
+         </div>
+         <button>About Us</button>
     </div>
   </div>
   <div style="margin-top: 100vh;"></div>
